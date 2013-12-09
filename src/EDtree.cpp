@@ -16,7 +16,8 @@ SEXP EDtree(SEXP learnsample, SEXP weight, SEXP distance, SEXP controls)
     {
       //begin the recurrence
       List subdata = getSubData(node0["split"], LearnSample, Weight); //split the data into two part.
-
+      node0["leftchild"] = SplitNode(subdata["leftsample"], subdata["leftweight"], Distance, Controls, 1, 1);
+      node0["rightchild"] = SplitNode(subdata["rightchild"], subdata["rightweight"], Distance, Controls, 1, 2);
     }
   
   return(wrap(node0));

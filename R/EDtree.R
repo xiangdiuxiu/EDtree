@@ -1,4 +1,4 @@
-setClass(Class="EDTREE",
+setClass(Class="edtree",
          representation=representation(
              tree="list",
              split="list"
