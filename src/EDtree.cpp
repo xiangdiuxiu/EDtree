@@ -118,7 +118,7 @@ List getSubSample(DataFrame varDF, DataFrame resDF, LogicalVector flag)
     {
       NumericVector vltemp;
       NumericVector vrtemp;
-      NumericVector dtemp = resDF[as<std::string>(VarNames[i])];
+      NumericVector dtemp = resDF[as<std::string>(ResNames[i])];
       for(int j=0; j<flag.size(); j++)
 	{
 	  if(flag[j]) vltemp.push_back(dtemp[j]);
